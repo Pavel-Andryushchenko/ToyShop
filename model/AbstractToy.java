@@ -12,4 +12,37 @@ public abstract class AbstractToy {
         this.dropChance =  dropChance;
         this.toyId = toyId;
     }
+
+
+    public String getToyName() {
+        return toyName;
+    }
+
+    public void setToyName(String toyName) {
+        this.toyName = toyName;
+    }
+
+    public int getToyCount() {
+        return toyCount;
+    }
+
+    public void setToyCount(int toyCount) {
+        this.toyCount = toyCount;
+    }
+
+    public int getDropChance() {
+        return dropChance;
+    }
+
+    public void setDropChance(int dropChance) {
+        this.dropChance = dropChance;
+    }
+
+    public int getToyId() {
+        return toyId;
+    }
+
+    public void setToyId(int toyId) {
+        this.toyId = toyId;
+    }
 }

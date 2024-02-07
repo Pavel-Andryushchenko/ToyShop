@@ -6,8 +6,9 @@ public class Main {
     public static void main(String[] args) {
         Controller controller = new Controller();
         Scanner scanner = new Scanner(System.in);
+        controller.loadInfo();
+        controller.showMenu();
         while (true){
-            controller.showMenu();
             String enteredData = scanner.next();
             switch (enteredData){
                 case ("add"):
@@ -16,10 +17,23 @@ public class Main {
                 case ("list"):
                     controller.showAllToy();
                     break;
+                case ("lottery"):
+                    controller.playLottery();
+                    break;
+                case ("winner"):
+                    controller.showWinner();
+                    break;
+                case ("get"):
+                    controller.getPrize();
+                    break;
+                case ("script"):
+                    controller.script();
+                    break;
                 case ("quit"):
+                    controller.writeInfoToFile();
                     break;
                 default:
-                    System.out.println("Повторите попытку");
+                    System.out.println("Неизвестная команда");
                     break;
             }
             if(enteredData.equals("quit")) {break;}
